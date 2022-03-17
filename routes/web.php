@@ -7,6 +7,7 @@ use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,7 @@ Route::get('/account',[AccountController::class,'account']);
 Route::get('/navbar',[NavbarController::class,'navbar']);
 Route::get('/navadmin',[NavAdminController::class,'navadmin']);
 Route::get('/profile',[ProfileController::class,'profile']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
