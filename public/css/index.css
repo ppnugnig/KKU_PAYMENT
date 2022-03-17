@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'kanit';
+    src: url(/font/Kanit/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: 'anton';
+    src: url(/font/Anton-Regular.ttf);
+}
+.text-kku{
+    font-size: 8em;
+    color: darkorange;
+    font-weight: bold;
+    font-family: 'anton',sans-serif;
+}
+.text-paym{
+    font-size: 8em;
+    margin-top: -4%;
+    font-weight: bold;
+    font-family: 'anton',sans-serif;
+}
+.text-webssite{
+    font-family: 'kanit';
+    margin-top: 1%;
+    font-size: 1.5em;
+}
+#signin{
+    margin-top: 20%;
+    background-color: darkorange;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'kanit',sans-serif;
+    font-size: 1.5em;
+}
+.imghome{
+    height: 720px;
+}
