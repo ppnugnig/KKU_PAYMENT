@@ -38,6 +38,8 @@
             <input class="form-control" type="text" name="std_id" value="{{$students->std_id}}" readonly>
             อีเมล :
             <input class="form-control" type="text" name="std_email" value="{{$students->std_email}}" readonly>
+            <input type="button" value="add">
+            
             <!-- ชื่อผู้ใช้งาน :
             <input class="form-control" type="text" name="" value="" readonly>
             สาขา :
