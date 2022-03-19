@@ -27,7 +27,9 @@
     border-radius: 10px;
 }
 .form-center{
-    padding: 20px;
+    padding: 20px; 
+    display: block;
+    justify-content: center;
 }
 .btn-right{
     float: right;

@@ -12,7 +12,7 @@
     <div class="row mt-5">
         <div class="col-md-12">
             <h2 class="text-white text-center">ข้อมูลการชำระเงิน</h2>
-            <a href="{{route('schedules.create')}}" class="btn btn-success my-3">+ สร้าง</a>
+            <a href="{{route('schedules.create')}}" class="btn my-3" id="btn-creat">+ สร้าง</a>
         </div>
     </div>
     @if($message = Session::get('success'))
@@ -20,8 +20,8 @@
             {{$message}}
         </div>
     @endif
-    <table class="table table-md text-white">
-        <tr class="text-center">
+    <table class="table table-borderless" id="table-coloe">
+        <tr class="text-center" id="head-border">
             <th>ประจำเดือน</th>
             <th>เริ่มวันที่</th>
             <th>สิ้นสุดวันที่</th>
@@ -34,10 +34,10 @@
             <td>{{$value->enddate}}</td>
             <td>
                 <form action="{{route('schedules.destroy',$value->id)}}" method="post">
-                    <a href="{{route('schedules.edit',$value->id)}}" class="btn btn-secondary">Edit</a>
+                    <a href="{{route('schedules.edit',$value->id)}}" class="btn btn-secondary">แก้ไข</a>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">ลบ</button>
                 </form>
             </td>
         </tr>

@@ -4,21 +4,6 @@
 <link rel="stylesheet" href="{{url('/css/style.css')}}">
     
     <title>เพิ่มข้อมูลวันที่ชำระเงิน</title>
-    <style>
-        .bg-form{
-            background-color: rgb(255,140,0);
-            border-radius: 10px;
-        }
-        .form-center{
-            display: block;
-            justify-content: center;
-            padding: 10px;
-        }
-        .btn-right{
-            float: right;
-
-        }
-    </style>
 </head>
 <body class="bg-dark">
     @extends('schedules.layout')
@@ -27,7 +12,7 @@
 <div class="row mt-5">
         <div class="col-md-12">
         <h2 class="text-white text-center">เพิ่มข้อมูลการชำระเงิน</h2>
-        <a href="{{ route('schedules.index') }}" class="btn btn-primary my-3">&loarr; กลับ</a>
+        <a href="{{ route('schedules.index') }}" class="btn my-3" id="btn-back">&loarr; กลับ</a>
         </div>
     </div>
 
@@ -67,7 +52,7 @@
             </div>
             
             <div class="col-md-8 my-3 ">
-                <button type="submit" class="btn btn-success btn-right" >เพิ่มข้อมูล</button>
+                <button type="submit" class="btn btn-right" id="btn-color">เพิ่มข้อมูล</button>
             </div>
         </div>
     </form>
