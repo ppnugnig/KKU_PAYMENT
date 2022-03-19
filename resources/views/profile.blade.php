@@ -35,13 +35,13 @@
             ชื่อ-นามสกุล :
             <input class="form-control" type="text" name="std_fname" value="" readonly>
             ชื่อผู้ใช้งาน :
-            <input class="form-control" type="text" name="" value="" readonly>
+            <input class="form-control" type="text" name="std_username" value="" readonly>
             สาขา :
-            <input class="form-control" type="text" name="" value="" readonly>
+            <input class="form-control" type="text" name="course_id" value="" readonly>
             ภาควิชา :
-            <input class="form-control" type="text" name="" value="" readonly>
+            <input class="form-control" type="text" name="dept_id" value="" readonly>
             คณะ :
-            <input class="form-control" type="text" name="" value="" readonly>
+            <input class="form-control" type="text" name="faculty_id" value="" readonly>
             อีเมล :
             <input class="form-control" type="text" name="std_email" value="" readonly>
         </div>
