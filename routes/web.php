@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserscheduleController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\StudentController;
 
 
 /*
@@ -39,3 +40,4 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 Route::resource('users',UserscheduleController::class);
 Route::resource('schedules',ScheduleController::class);
+Route::resource('students',StudentController::class);
