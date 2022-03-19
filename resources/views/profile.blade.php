@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,8 +28,20 @@
 
     @section('navbar')
     <div class="card-body mt-5" id="bg-orange">
+        <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
+        <table class="table text-white">
+            <tr class="text-center">
+                <th width="150">รหัสนักศึกษา</th>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+                <th>อีเมล</th>
+                <th width="150">ชื่อผู้ใช้</th>
+                <th>สาขา</th>
+                <th>ภาควิชา</th>
+                <th>คณะ</th>
+            </tr>
+            @foreach($students as $students)
         <div class="mb-3">
-        <!-- @foreach($students as $row) -->
             ชื่อ :
             <input class="form-control" type="text" name="std_fname" value="{{$students->std_fname}}" readonly>
             นามสกุล :
@@ -38,20 +50,21 @@
             <input class="form-control" type="text" name="std_id" value="{{$students->std_id}}" readonly>
             อีเมล :
             <input class="form-control" type="text" name="std_email" value="{{$students->std_email}}" readonly>
-            <input type="button" value="add">
             
-            <!-- ชื่อผู้ใช้งาน :
+            ชื่อผู้ใช้งาน :
             <input class="form-control" type="text" name="" value="" readonly>
             สาขา :
             <input class="form-control" type="text" name="" value="" readonly>
             ภาควิชา :
             <input class="form-control" type="text" name="" value="" readonly>
             คณะ :
-            <input class="form-control" type="text" name="" value="" readonly> -->
-        <!-- @endforeach -->
+            <input class="form-control" type="text" name="" value="" readonly>
         </div>
+        @endforeach
+
+
     </div>
     @stop
 </body>
 
-</html>
+</html> -->

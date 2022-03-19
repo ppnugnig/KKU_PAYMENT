@@ -32,28 +32,28 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Payment schedule
+                            ตารางการชำระเงินประจำเดือน
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Schedule</a></li>
-                            <li><a class="dropdown-item" href="#">Bill account</a></li>
+                            <li><a class="dropdown-item" href="#">ตารางการชำระเงิน</a></li>
+                            <li><a class="dropdown-item" href="#">แจ้งชำระเงิน</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Active</a>
+                        <a class="nav-link" href="#">กิจกรรม</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Status</a>
+                        <a class="nav-link" href="#">ตรวจสอบสถานะการชำระเงิน</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-scroll me-4" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown d-flex">
                         <a class="nav-link p-2" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <span class="m-2">User </span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
+                           <span class="m-2">ข้อมูลส่วนตัว</span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            <li><a class="dropdown-item" href="#">ข้อมูลส่วนตัว</a></li>
+                            <li><a class="dropdown-item" href="#">ออกจากระบบ</a></li>
                         </ul>
                     </li>
                 </ul>
