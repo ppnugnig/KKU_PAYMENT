@@ -7,6 +7,8 @@ use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserscheduleController;
+use App\Http\Controllers\StudentController;
 
 
 /*
@@ -30,11 +32,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/account',[AccountController::class,'account']);
 Route::get('/navbar',[NavbarController::class,'navbar']);
 Route::get('/navadmin',[NavAdminController::class,'navadmin']);
-Route::get('/profile',[ProfileController::class,'profile']);
-Auth::routes();
+Route::get('/profile',[ProfileController::class,'Std_profile']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-Route::resource('schedules',ScheduleController::class);
 Route::resource('users',UserscheduleController::class);
+Route::resource('schedules',ScheduleController::class);
+Route::resource('students',StudentController::class);
+

@@ -1,0 +1,49 @@
+
+@font-face {
+            font-family: 'kanit';
+            src: url(/font/Kanit/Kanit-Regular.ttf);
+        }
+
+*{
+    font-family: 'kanit';
+}
+#btn-creat{
+    background-color: darkorange;
+}
+#btn-creat:hover{
+    background-color: lightgrey;
+    color: darkorange;
+}
+#table-color{
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+#head-border{
+    border-bottom: 2px solid darkorange;
+}
+.bg-form{
+    /* background-color: darkorange; */
+    background-color: darkorange;
+    border-radius: 10px;
+}
+.form-center{
+    padding: 20px;
+}
+.btn-right{
+    float: right;
+
+}
+#btn-color{
+    color: white;
+    background-color: #116530;
+}
+#btn-color:hover{
+    background-color: #0B4619;
+    color: white;
+}
+#btn-back:hover{
+    background-color: #F6D860;
+}
+#btn-back{
+    background-color: #FFEEAD;
+}
