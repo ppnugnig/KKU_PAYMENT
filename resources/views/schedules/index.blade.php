@@ -20,7 +20,7 @@
             {{$message}}
         </div>
     @endif
-    <table class="table table-borderless" id="table-coloe">
+    <table class="table table-borderless" id="table-color">
         <tr class="text-center" id="head-border">
             <th>ประจำเดือน</th>
             <th>เริ่มวันที่</th>

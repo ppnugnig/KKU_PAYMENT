@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>ข้อมูลวันที่ชำระเงิน</title>
+    <link rel="stylesheet" href="{{url('/css/style.css')}}">
 
 </head>
 <body class="bg-dark">
