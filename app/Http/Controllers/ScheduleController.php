@@ -16,7 +16,7 @@ class ScheduleController extends Controller
     public function index()
     {
         //
-        $data = Schedule::first()->paginate(6);
+        $data = Schedule::latest()->paginate(6);
         
         return view('schedules.index', compact('data'))
                 ->with('i', (request()->input('page',1)-1)*6);
