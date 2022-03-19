@@ -27,7 +27,7 @@
 <div class="row mt-5">
         <div class="col-md-12">
         <h2 class="text-white text-center">เพิ่มข้อมูลการชำระเงิน</h2>
-        <a href="{{ route('schedules.index') }}" class="btn btn-primary my-3">&loarr; กลับ</a>
+        <a href="{{ route('schedules.index') }}" class="btn my-3" id="">&loarr; กลับ</a>
         </div>
     </div>
 
