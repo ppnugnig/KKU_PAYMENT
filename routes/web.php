@@ -6,6 +6,8 @@ use App\Http\Controllers\NavAdminController;
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserscheduleController;
+use App\Http\Controllers\ScheduleController;
 
 
 /*
@@ -35,4 +37,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
+Route::resource('users',UserscheduleController::class);
 Route::resource('schedules',ScheduleController::class);
