@@ -6,7 +6,7 @@
     <title>ข้อมูลนักศึกษา</title>
 
 </head>
-<body class="bg-dark">
+<body class="bg-color">
 @extends('students.layout')
 
 @section('content')

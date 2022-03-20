@@ -6,7 +6,7 @@
 
    
 </head>
-<body class="bg-dark">
+<body class="bg-colr">
 @extends('students.layout')
 
 @section('content')
