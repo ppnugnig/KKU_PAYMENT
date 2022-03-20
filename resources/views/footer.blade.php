@@ -17,7 +17,7 @@
 </head>
 <body>
 <nav class="navbar navbar-dark bg-footer fixed-bottom">
-  <p class="text-white center">KKU PAYMENT</p>
+  <p class="text-white center">KKU PAYMENT  </p>
 </nav>
 @yield('footer')
     

@@ -31,6 +31,8 @@
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
 
+        {{Auth::user()->name}}
+
             @foreach($students as $row )
                 @foreach($courses as $course)
                     @foreach($departments as $department)
@@ -64,8 +66,11 @@
                                     $std_faculty_id == $faculty_id
                                 )
 
+
+
+                                
                                 echo "รหัสนักศึกษา :";
-                                echo "<input class='form-control' type='text' name='std_id' value='$std_id' readonly>";
+                                echo "<input class='form-control' type='text' name='std_id' value='$std_id ' readonly>";
                                 echo "ชื่อ-นามสกุล :";
                                 echo "<input class='form-control' type='text' name='std_fullname' value='$std_fname  $std_lname' readonly>";
                                 echo "ชื่อผู้ใช้งาน :";
