@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NavAdminController;
 use App\Http\Controllers\NavbarController;
@@ -32,6 +33,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/account',[AccountController::class,'account']);
 Route::get('/navbar',[NavbarController::class,'navbar']);
 Route::get('/navadmin',[NavAdminController::class,'navadmin']);
+Route::get('/footer',[FooterController::class.'footer']);
 Route::get('/profile',[ProfileController::class,'Std_profile']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

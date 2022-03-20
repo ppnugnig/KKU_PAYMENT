@@ -14,11 +14,14 @@
             height: 40px;
             border-radius: 50%;
         }
+        .bg-color{
+            background-color: black;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-color">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="#home"> <span class="ttorange">KKU </span>PAYMENT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">

@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="bg-dark">
+<body class="bg-color">
 
 @extends('navbar')
 
@@ -33,6 +33,7 @@
     </div>
     </div>
 @stop
+@extends('footer')
 </body>
 
 </html>

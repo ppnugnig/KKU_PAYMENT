@@ -116,5 +116,6 @@
     </form>
 @endsection
 @extends('navbar')
+@extends('footer')
 </body>
 </html>

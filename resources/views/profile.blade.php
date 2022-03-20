@@ -87,6 +87,7 @@
         </div>
     </div>
     @stop
+    @extends('footer')
 </body>
 
 </html>

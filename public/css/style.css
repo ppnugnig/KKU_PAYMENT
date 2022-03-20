@@ -50,7 +50,6 @@ color: white;
 background-color: #F6D860;
 }
 #btn-back{
-<<<<<<< HEAD
     background-color: #FFEEAD;
 }
 .link-color{
@@ -59,16 +58,6 @@ background-color: #F6D860;
 .link-color:hover{
     color: darkorange;
 }
-=======
-background-color: #FFEEAD;
-}
-.link-color{
-color: white;
-}
-.link-color:hover{
-color: darkorange;
-}
 .bg-color{
 background-color: black;
 }
->>>>>>> 50abc9700b57a4067c065ebe49deebdd1532e60c

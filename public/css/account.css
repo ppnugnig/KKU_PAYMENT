@@ -8,6 +8,9 @@
     border-radius: 5px;
     font-family: 'kanit',sans-serif;
 }
+.bg-color{
+    background-color: black;
+}
 .imgqrcod{
     margin-left: 30%;
     width: 200px;
