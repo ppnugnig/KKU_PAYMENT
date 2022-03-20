@@ -49,3 +49,9 @@
 #btn-back{
     background-color: #FFEEAD;
 }
+.link-color{
+    color: white;
+}
+.link-color:hover{
+    color: darkorange;
+}

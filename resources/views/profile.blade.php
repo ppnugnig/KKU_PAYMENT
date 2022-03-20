@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>ข้อมูลส่วนตัว</title>
     <link rel="stylesheet" href="{{url('/css/font.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -30,24 +30,30 @@
     <div class="card-body mt-5" id="bg-orange">
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
+        <!-- @foreach($students as $row) -->
+
             รหัสนักศึกษา :
-            <input class="form-control" type="text" name="std_id" value="" readonly>
+            <input class="form-control" type="text" name="std_id" value="{{$row->std_id}}" readonly>
             ชื่อ-นามสกุล :
-            <input class="form-control" type="text" name="std_fname" value="" readonly>
+            <input class="form-control" type="text" name="std_fname" value="{{$row->std_fname}} {{$row->std_lname}}" readonly>
             ชื่อผู้ใช้งาน :
-            <input class="form-control" type="text" name="std_username" value="" readonly>
+            <input class="form-control" type="text" name="std_username" value="{{$row->std_username}}" readonly>
             สาขา :
-            <input class="form-control" type="text" name="course_id" value="" readonly>
+            @foreach($courses as $row)
+            <input class="form-control" type="text" name="course_id" value="{{$row->course_name}}" readonly>
+            @endforeach
             ภาควิชา :
-            <input class="form-control" type="text" name="dept_id" value="" readonly>
+            @foreach($departments as $row)
+            <input class="form-control" type="text" name="dept_id" value="{{$row->dept_name}}" readonly>
+            @endforeach
             คณะ :
-            <input class="form-control" type="text" name="faculty_id" value="" readonly>
+            @foreach($facultys as $row)
+            <input class="form-control" type="text" name="faculty_id" value="{{$row->faculty_name}}" readonly>
+            @endforeach
             อีเมล :
-            <input class="form-control" type="text" name="std_email" value="" readonly>
+            <input class="form-control" type="text" name="std_email" value="{{$row->std_email}}" readonly>
+            <!-- @endforeach -->
         </div>
-
-
-
     </div>
     @stop
 </body>
