@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserscheduleController;
 use App\Http\Controllers\StudentController;
 
+use App\http\Controllers\KkupaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,26 @@ Route::resource('users',UserscheduleController::class);
 Route::resource('schedules',ScheduleController::class);
 Route::resource('students',StudentController::class);
 
+
+////////////////////////////////////////////
+
+
+Route::get('/add-kkupayment',[KkupaymentController::class,'create']);
+
+Route::post('/add-kkupayment', [KkupaymentController::class, 'store']);
+
+
+
+Route::get('/kkupayments',[KkupaymentController::class,'index']);
+
+Route::get('/kkupayments1',[KkupaymentController::class,'index1']);
+
+Route::post('/status', [KkupaymentController::class,'update_status']);
+
+
+
+////////////////////////////////////////////
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

@@ -31,64 +31,28 @@
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
 
-        {{Auth::user()->name}}
-
-            @foreach($students as $row )
-                @foreach($courses as $course)
-                    @foreach($departments as $department)
-                        @foreach($facultys as $faculty)
-                            <?php
-
-                                $std_id = $row->std_id;
-                                $std_fname = $row->std_fname;
-                                $std_lname = $row->std_lname;
-                                $std_username = $row->std_username;
-                                $std_email = $row->std_email;
-
-                                $std_course_id = $row->course_id;
-                                $std_dept_id = $row->dept_id;
-                                $std_faculty_id = $row->faculty_id;
-
-                                $course_id = $course->course_id;
-                                $course_name = $course->course_name;
-                                $dept_id = $course->dept_id;
-                                
-                                $dept_id = $department->dept_id;
-                                $dept_name = $department->dept_name;
-                                $faculty_id = $department->faculty_id;
-
-                                $faculty_id = $faculty->faculty_id;
-                                $faculty_name = $faculty->faculty_name;
-
-                                if(
-                                    $std_course_id == $course_id AND
-                                    $std_dept_id == $dept_id AND 
-                                    $std_faculty_id == $faculty_id
-                                )
+           
 
 
 
-                                
-                                echo "รหัสนักศึกษา :";
-                                echo "<input class='form-control' type='text' name='std_id' value='$std_id ' readonly>";
-                                echo "ชื่อ-นามสกุล :";
-                                echo "<input class='form-control' type='text' name='std_fullname' value='$std_fname  $std_lname' readonly>";
-                                echo "ชื่อผู้ใช้งาน :";
-                                echo "<input class='form-control' type='text' name='std_username' value='$std_username' readonly>";
-                                echo "สาขา :";
-                                echo "<input class='form-control' type='text' name='course_id' value='$course_name' readonly>";
-                                echo "ภาควิชา :";
-                                echo "<input class='form-control' type='text' name='dept_id' value='$dept_name' readonly>";
-                                echo "คณะ :";
-                                echo "<input class='form-control' type='text' name='faculty_id' value='$faculty_name' readonly>";
-                                echo "อีเมล :";
-                                echo "<input class='form-control' type='text' name='std_email' value='$std_email' readonly>";
-                            ?>
 
-                        @endforeach
-                    @endforeach
-                @endforeach
-            @endforeach
+
+         รหัสนักศึกษา :
+         <input class="form-control" type="text" name='std_id' value=' {{Auth::user()->name}}' readonly>;
+         ชื่อ-นามสกุล :
+         <input class="form-control" type="text" name='std_fullname' value='{{Auth::user()->name}}' readonly>;
+         ชื่อผู้ใช้งาน :
+         <input class="form-control" type="text" name='std_username' value='{{Auth::user()->name}}' readonly>;
+         สาขา :
+         <input class="form-control" type="text" name='course_id' value='{{Auth::user()->name}}' readonly>;
+         ภาควิชา :
+         <input class="form-control" type="text" name='dept_id' value='{{Auth::user()->name}}' readonly>;
+         คณะ :
+         <input class="form-control" type="text" name='faculty_id' value='{{Auth::user()->name}}e' readonly>;
+         อีเมล :
+         <input class="form-contro" type="text" name='std_email' value='{{Auth::user()->name}}' readonly>;
+
+
         </div>
     </div>
     @stop
