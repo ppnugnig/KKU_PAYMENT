@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{url('/css/style.css')}}">
 
 </head>
-<body class="bg-dark">
+<body class="bg-color">
 @extends('schedules.layout')
 
 @section('content')

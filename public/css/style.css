@@ -1,52 +1,56 @@
 
 @font-face {
-            font-family: 'kanit';
-            src: url(/font/Kanit/Kanit-Regular.ttf);
-        }
+    font-family: 'kanit';
+    src: url(/font/Kanit/Kanit-Regular.ttf);
+}
 
 *{
-    font-family: 'kanit';
+font-family: 'kanit';
 }
 #btn-creat{
-    background-color: darkorange;
+color: white;
+background-color: rgb(248, 149, 27);
 }
 #btn-creat:hover{
-    background-color: lightgrey;
-    color: darkorange;
+/* background-color: white;
+color: darkorange; */
+background-color: darkorange;
+color: white;
 }
 #table-color{
-    background-color: lightgrey;
-    border-radius: 10px;
+background-color: white;
+border-radius: 10px;
 }
 #head-border{
-    border-bottom: 2px solid darkorange;
+border-bottom: 2px solid darkorange;
 }
 .bg-form{
-    /* background-color: darkorange; */
-    background-color: darkorange;
-    border-radius: 10px;
+/* background-color: darkorange; */
+background-color: darkorange;
+border-radius: 10px;
 }
 .form-center{
-    padding: 20px; 
-    display: block;
-    justify-content: center;
+padding: 20px;
+display: block;
+justify-content: center;
 }
 .btn-right{
-    float: right;
+float: right;
 
 }
 #btn-color{
-    color: white;
-    background-color: #116530;
+color: white;
+background-color: #116530;
 }
 #btn-color:hover{
-    background-color: #0B4619;
-    color: white;
+background-color: #0B4619;
+color: white;
 }
 #btn-back:hover{
-    background-color: #F6D860;
+background-color: #F6D860;
 }
 #btn-back{
+<<<<<<< HEAD
     background-color: #FFEEAD;
 }
 .link-color{
@@ -55,3 +59,16 @@
 .link-color:hover{
     color: darkorange;
 }
+=======
+background-color: #FFEEAD;
+}
+.link-color{
+color: white;
+}
+.link-color:hover{
+color: darkorange;
+}
+.bg-color{
+background-color: black;
+}
+>>>>>>> 50abc9700b57a4067c065ebe49deebdd1532e60c

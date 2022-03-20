@@ -5,7 +5,7 @@
     
     <title>เพิ่มข้อมูลวันที่ชำระเงิน</title>
 </head>
-<body class="bg-dark">
+<body class="bg-color">
     @extends('schedules.layout')
 
 @section('content')
