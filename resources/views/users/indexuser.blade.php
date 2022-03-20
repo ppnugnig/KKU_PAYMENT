@@ -32,5 +32,6 @@
     <a href="#" class="btn-right link-color">ชำระเงิน</a><p class="text-white btn-right">คลิกเพื่อชำระเงิน: </p>
 
 @endsection
+@extends('navbar')
 </body>
 </html>

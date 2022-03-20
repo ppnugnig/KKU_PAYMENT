@@ -57,5 +57,6 @@
         </div>
     </form>
 @endsection
+@extends('navbar')
 </body>
 </html>

@@ -107,5 +107,6 @@
     {!! $students->links() !!}
 
 @endsection
+@extends('navbar')
 </body>
 </html>

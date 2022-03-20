@@ -31,7 +31,7 @@
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
 
-            @foreach($students as $key => $row )
+            @foreach($students as $row )
                 @foreach($courses as $course)
                     @foreach($departments as $department)
                         @foreach($facultys as $faculty)
