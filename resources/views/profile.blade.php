@@ -30,13 +30,6 @@
     <div class="card-body mt-5" id="bg-orange">
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
-
-           
-
-
-
-
-
          รหัสนักศึกษา :
          <input class="form-control" type="text" name='std_id' value=' {{Auth::user()->name}}' readonly>;
          ชื่อ-นามสกุล :
@@ -51,8 +44,6 @@
          <input class="form-control" type="text" name='faculty_id' value='{{Auth::user()->name}}e' readonly>;
          อีเมล :
          <input class="form-contro" type="text" name='std_email' value='{{Auth::user()->name}}' readonly>;
-
-
         </div>
     </div>
     @stop
