@@ -24,9 +24,9 @@ use App\http\Controllers\KkupaymentController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ /* Route::get('/', function () {
+     return view('welcome');
+     }); */
 
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -47,18 +47,30 @@ Route::resource('students',StudentController::class);
 
 ////////////////////////////////////////////
 
+Route::get('/hello',[KkupaymentController::class,'menu']);
+Route::post('/hello_form',[KkupaymentController::class,'menu_form']);
 
 Route::get('/add-kkupayment',[KkupaymentController::class,'create']);
 
 Route::post('/add-kkupayment', [KkupaymentController::class, 'store']);
 
+Route::get('/activity',[KkupaymentController::class,'activity']);
 
 
-Route::get('/kkupayments',[KkupaymentController::class,'index']);
+/* Route::post('/activity',[KkupaymentController::class,'update_amount_activity']);  */
 
-Route::get('/kkupayments1',[KkupaymentController::class,'index1']);
+Route::post('/create_activity',[KkupaymentController::class,'create_activity']);
+
+
+Route::get('/kkupayments_admin',[KkupaymentController::class,'index']);
+
+Route::get('/kkupayments_user',[KkupaymentController::class,'index1']);
 
 Route::post('/status', [KkupaymentController::class,'update_status']);
+
+
+
+
 
 
 

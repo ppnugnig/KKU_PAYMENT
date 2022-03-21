@@ -30,24 +30,58 @@
     <div class="card-body mt-5" id="bg-orange">
         <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
         <div class="mb-3">
-         รหัสนักศึกษา :
-         <input class="form-control" type="text" name='std_id' value=' {{Auth::user()->name}}' readonly>;
-         ชื่อ-นามสกุล :
-         <input class="form-control" type="text" name='std_fullname' value='{{Auth::user()->name}}' readonly>;
-         ชื่อผู้ใช้งาน :
-         <input class="form-control" type="text" name='std_username' value='{{Auth::user()->name}}' readonly>;
-         สาขา :
-         <input class="form-control" type="text" name='course_id' value='{{Auth::user()->name}}' readonly>;
-         ภาควิชา :
-         <input class="form-control" type="text" name='dept_id' value='{{Auth::user()->name}}' readonly>;
-         คณะ :
-         <input class="form-control" type="text" name='faculty_id' value='{{Auth::user()->name}}e' readonly>;
-         อีเมล :
-         <input class="form-contro" type="text" name='std_email' value='{{Auth::user()->name}}' readonly>;
+
+
+            @foreach($students as $key => $value)
+            @foreach($courses as $course)
+
+            @foreach($departments as $department)
+
+            @foreach($facultys as $facultie)
+
+
+            @if(
+            $value->course_id==$course->course_id
+            and
+            $value->dept_id==$department->dept_id
+            and
+            $value->faculty_id==$facultie->faculty_id
+            and 
+            $value->std_id==Auth::user()->std 
+            
+           
+
+            )
+         
+
+
+            รหัสนักศึกษา :
+            <input class="form-control" type="text" name='std_id' value=' {{Auth::user()->std}}' readonly>
+            ชื่อ-นามสกุล :
+            <input class="form-control" type="text" name='std_fullname' value='{{Auth::user()->name}} {{Auth::user()->lname}}' readonly>
+            สาขา 
+            <input class='form-control' type='text name=' course_id' value='{{$course->course_name}}' readonly>
+            ภาควิชา :
+            <input class='form-control' type='text' name='dept_id' value='{{$department->dept_name}}' readonly>
+            คณะ :
+            <input class='form-control' type='text' name='faculty_id' value='{{$facultie->faculty_name}}' readonly>
+
+            @endif
+
+            
+
+            @endforeach
+            @endforeach
+            @endforeach
+            @endforeach
+
+
+
+
+
         </div>
-    </div>
-    @stop
-    @extends('footer')
+        @stop
+        @extends('footer')
 </body>
 
 </html>

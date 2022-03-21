@@ -38,24 +38,24 @@
                             ตารางการชำระเงินประจำเดือน
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">ตารางการชำระเงิน</a></li>
-                            <li><a class="dropdown-item" href="#">แจ้งชำระเงิน</a></li>
+                            <li><a class="dropdown-item" href="account">ช่องทางการชำระเงิน</a></li>
+                            <li><a class="dropdown-item" href="add-kkupayment">แจ้งชำระเงิน</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">กิจกรรม</a>
+                        <a class="nav-link" href="activity">กิจกรรม</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ตรวจสอบสถานะการชำระเงิน</a>
+                        <a class="nav-link" href="kkupayments_user">ตรวจสอบสถานะการชำระเงิน</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-scroll me-4" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown d-flex">
                         <a class="nav-link p-2" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <span class="m-2">ข้อมูลส่วนตัว</span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
+                           <span class="m-2">  {{Auth::user()->name}}</span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">ข้อมูลส่วนตัว</a></li>
+                            <li><a class="dropdown-item" href="profile">ข้อมูลส่วนตัว</a></li>
                             <li><a class="dropdown-item" href="#">ออกจากระบบ</a></li>
                         </ul>
                     </li>

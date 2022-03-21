@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{url('/css/style.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -19,9 +20,12 @@
     </style>
 </head>
 
-<body>
+<body class="bg-color">
 
-    <!-- {{Auth::user()->name}} -->
+@extends('navbar')
+
+@section('navbar')
+
 
 
     <div class="container">
@@ -35,16 +39,20 @@
 
                         <td></td>
                         <table class="table table-bordered table-striped">
+                       
+                       
 
+                       
+                       
                             <thead>
 
                                 <tr>
-                                    <th valign='middle'>Student ID</th>
-                                    <th valign='middle'>Date</th>
-                                    <th valign='middle'>Time</th>
-                                    <th valign='middle'>Amount</th>
-                                    <th valign='middle'>Image</th>
-                                    <th valign='middle'>status</th>
+                                    <th valign='middle'>รหัสนักศึกษา</th>
+                                    <th valign='middle'>วันที่</th>
+                                    <th valign='middle'>เวลา</th>
+                                    <th valign='middle'>จำนวนเงิน</th>
+                                    
+                                    <th valign='middle'>สถานะ</th>
 
 
                                 </tr>
@@ -54,15 +62,16 @@
                                 <tr>
 
                                     @foreach ($kkupayments as $kkupayment)
+                                  
+                                     
 
-
-                                    @if($kkupayment->std_id=='633020306-3')
+                                    @if($kkupayment->std_id == Auth::user()->std )
 
                                     <th valign='middle' scope="row">{{ $kkupayment->std_id}}</th>
                                     <td valign='middle'>{{$kkupayment->date}}</td>
                                     <td valign='middle'>{{$kkupayment->time}}</td>
                                     <td valign='middle'>{{$kkupayment->amount}}</td>
-                                    <td valign='middle'><img src="{{ 'payment/'.$kkupayment->file_image }}" class="img-responsive" style="max-height:100px; max-width:100px" alt="" srcset=""></td>
+                                    
                                     <td valign='middle'>
 
 
@@ -90,10 +99,9 @@
             </div>
         </div>
     </div>
+        @stop
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        @extends('footer')
 
 </body>
 
