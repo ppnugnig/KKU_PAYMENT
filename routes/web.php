@@ -24,13 +24,13 @@ use App\http\Controllers\KkupaymentController;
 |
 */
 
- /* Route::get('/', function () {
-     return view('welcome');
-     }); */
+// Route::get('/', function () {
+//      return view('index');
+// }); 
 
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/',[IndexController::class,'welcome']);
 Route::get('/account',[AccountController::class,'account']);
 Route::get('/navbar',[NavbarController::class,'navbar']);
 Route::get('/navadmin',[NavAdminController::class,'navadmin']);

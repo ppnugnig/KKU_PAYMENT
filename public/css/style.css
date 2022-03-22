@@ -34,7 +34,7 @@ padding: 20px;
 display: block;
 justify-content: center;
 }
-.btn-right{
+.btn-right,.right{
 float: right;
 
 }
@@ -60,4 +60,37 @@ background-color: #F6D860;
 }
 .bg-color{
 background-color: black;
+}
+#btn-login{
+    background-color: #2B2B2B;
+    color: white;
+}
+#btn-login:hover{
+    background-color: black;
+    color: white;
+}
+
+.ttorange {
+    color: darkorange;
+}
+
+.imgprofile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#color-link{
+    color: white;
+}
+#color-link:hover{
+    color: darkorange;
+}
+.card-color{
+    background-color: darkorange;
+}
+.btn-linkcolor{
+    text-decoration: underline;
+}
+.btn-linkcolor:hover{
+    color:white;
 }

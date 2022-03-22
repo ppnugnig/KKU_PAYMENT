@@ -23,7 +23,7 @@
     </style>
 </head>
 
-<body class="bg-dark">
+<body class="bg-color">
     @extends('navbar')
 
     @section('navbar')
@@ -60,7 +60,7 @@
             ชื่อ-นามสกุล :
             <input class="form-control" type="text" name='std_fullname' value='{{Auth::user()->name}} {{Auth::user()->lname}}' readonly>
             สาขา 
-            <input class='form-control' type='text name=' course_id' value='{{$course->course_name}}' readonly>
+            <input class='form-control' type='text' name='course_id' value='{{$course->course_name}}' readonly>
             ภาควิชา :
             <input class='form-control' type='text' name='dept_id' value='{{$department->dept_name}}' readonly>
             คณะ :

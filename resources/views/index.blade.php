@@ -17,7 +17,7 @@
                 <p class="text-kku">KKU</p>
                 <p class="text-white text-paym">PAYMENT</p>
                 <p class="text-white text-webssite ">เว็บไซต์ตรวจสอบสถานะการจ่ายเงินของนักศึกษามหาวิทยาลัยขอนแก่น</p>
-                <a href="#login"><button type="button" class="btn p-3" id="signin">คลิกเพื่อเข้าสู่ระบบ</button></a>
+                <a href="{{url('/login')}}"><button type="button" class="btn p-3" id="signin">คลิกเพื่อเข้าสู่ระบบ</button></a>
             </div>
 
             <div class="col-auto">
