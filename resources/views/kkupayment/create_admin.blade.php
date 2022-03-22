@@ -50,7 +50,7 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
 
                                 <tr>
 
