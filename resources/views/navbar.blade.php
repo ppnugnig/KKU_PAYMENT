@@ -43,7 +43,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="activity">กิจกรรม</a>
+                        <a class="nav-link" href="activity_user">กิจกรรม</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="kkupayments_user">ตรวจสอบสถานะการชำระเงิน</a>
@@ -56,7 +56,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <li><a class="dropdown-item" href="profile">ข้อมูลส่วนตัว</a></li>
-                            <li><a class="dropdown-item" href="#">ออกจากระบบ</a></li>
+                            <li><a class="dropdown-item" href="logout">ออกจากระบบ</a></li>
                         </ul>
                     </li>
                 </ul>

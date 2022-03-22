@@ -21,35 +21,48 @@ class KkupaymentController extends Controller
     public function menu(Request $request)
     {
         return view('hello');
-
-    
     }
 
     public function menu_form(Request $request)
     {
         $check = $request->input('check');
 
-    
-        if($check==1){
+        if ($check == 1) {
 
             $kkupayments = Kkupayment::all();
 
             $amount_sucing = Kkupayment::where('status', 'รอตรวจสอบ')->sum('amount');
-            $amount_suc = Kkupayment::where('status', 'สำเร็จ')->sum('amount');
+            $amount_suc = Kkupayment::where('status', 'จ่ายแล้ว')->sum('amount');
             $amount_nosuc = Kkupayment::where('status', 'ไม่สำเร็จ')->sum('amount');
             $amount_sum = $amount_sucing + $amount_suc + $amount_nosuc;
-    
+
             return view('kkupayment.create_admin', compact('kkupayments', 'amount_sucing', 'amount_suc', 'amount_nosuc', 'amount_sum'));
-        }else{
+        } else {
             $kkupayments = Kkupayment::all();
             $schedules = Schedule::all();
-            
-        
-        return view('users.indexuser', compact('kkupayments','schedules'));
+
+            return view('users.indexuser', compact('kkupayments', 'schedules'));
         }
     }
 
     public function activity()
+    {
+        $activitys = activity::all();
+
+        $count_activity = count($activitys);
+
+        $amount_activity = activity::sum('amount');
+
+        $amount_suc = Kkupayment::where('status', 'จ่ายแล้ว')->sum('amount');
+        
+        $total = ($amount_suc - $amount_activity);
+
+        $check_user = user::find(1);
+
+        return view('kkupayment.total_activity', compact('activitys', 'count_activity', 'total', 'amount_activity', 'amount_suc', 'check_user'));
+    }
+
+    public function activity_user()
     {
         $activitys = activity::all();
 
@@ -64,9 +77,11 @@ class KkupaymentController extends Controller
 
 
 
-        return view('kkupayment.total_activity', compact('activitys', 'count_activity', 'total', 'amount_activity', 'amount_suc', 'check_user'));
+        return view('kkupayment.total_activity_user', compact('activitys', 'count_activity', 'total', 'amount_activity', 'amount_suc', 'check_user'));
     }
-    
+
+
+
     /* public function update_amount_activity(Request $request){
         
         $activity = activity::find($request->input('id'));
@@ -77,8 +92,6 @@ class KkupaymentController extends Controller
         $activitys = activity::all();
         $count_activity = count($activitys);
 
-
-        
         return view('kkupayment.total_activity',compact('activitys','count_activity'));
     }  */
 
@@ -112,15 +125,16 @@ class KkupaymentController extends Controller
     public function index1()
     {
         $kkupayments = Kkupayment::all();
+        $amount_suc = Kkupayment::where('status', 'จ่ายแล้ว')->sum('amount');
         /* $mark = User::all(); */
-        return view('kkupayment.create_user', compact('kkupayments'));
+        return view('kkupayment.create_user', compact('kkupayments','amount_suc'));
     }
     public function index()
     {
         $kkupayments = Kkupayment::all();
 
         $amount_sucing = Kkupayment::where('status', 'รอตรวจสอบ')->sum('amount');
-        $amount_suc = Kkupayment::where('status', 'สำเร็จ')->sum('amount');
+        $amount_suc = Kkupayment::where('status', 'จ่ายแล้ว')->sum('amount');
         $amount_nosuc = Kkupayment::where('status', 'ไม่สำเร็จ')->sum('amount');
         $amount_sum = $amount_sucing + $amount_suc + $amount_nosuc;
 
@@ -154,12 +168,14 @@ class KkupaymentController extends Controller
 
 
         $kkupayments = Kkupayment::all();
-
         $amount_sucing = Kkupayment::where('status', 'รอตรวจสอบ')->sum('amount');
         $amount_suc = Kkupayment::where('status', 'จ่ายแล้ว')->sum('amount');
         $amount_nosuc = Kkupayment::where('status', 'ไม่สำเร็จ')->sum('amount');
         $amount_sum = $amount_sucing + $amount_suc + $amount_nosuc;
-        return view('kkupayment.create_admin', compact('kkupayments', 'amount_sucing', 'amount_suc', 'amount_nosuc', 'amount_sum'));
+
+
+        
+        return view('kkupayment.create_user', compact('kkupayments', 'amount_sucing', 'amount_suc', 'amount_nosuc', 'amount_sum'));
     }
 
 

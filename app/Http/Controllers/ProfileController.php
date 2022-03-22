@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Faculty;
@@ -15,6 +15,7 @@ class ProfileController extends Controller
         $courses = Course::all();
         $departments = Department::all();
         $facultys = Faculty::all();
-        return view('profile',compact('students','courses','departments','facultys'));
+        $Users = User::all();
+        return view('profile',compact('students','courses','departments','facultys','Users'));
     }
 }

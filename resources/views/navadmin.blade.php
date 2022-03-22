@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-color">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#home"> <span class="ttorange">KKU </span>PAYMENT</a>
+            <a class="navbar-brand fw-bold" href="kkupayments_admin"> <span class="ttorange">KKU </span>PAYMENT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,20 +39,26 @@
                         </ul>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">สรุปผลรวมการชำระ</a>
+                        <a class="nav-link" href="kkupayments_admin">ตรวจสอบการชำระเงิน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">แก้ไขข้อมูลนักศึกษา</a>
+                        <a class="nav-link" href="schedules">ตารางการชำระเงิน</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="students">ข้อมูลนักศึกษา</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="activity">เพิ่มข้อมูลค่าใช้จ่าย</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-scroll me-4" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown d-flex">
                         <a class="nav-link p-2" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <span class="m-2">ผู้ดูแล</span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
+                           <span class="m-2">{{Auth::user()->name}}</span> <img class="imgprofile " src="{{url('/img/profile.png')}}" alt="imgprofile">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                             <!-- <li><a class="dropdown-item" href="#">Profile</a></li> -->
-                            <li><a class="dropdown-item" href="#">ออกจากระบบ</a></li>
+                            <li><a class="dropdown-item" href="logout">ออกจากระบบ</a></li>
                         </ul>
                     </li>
                 </ul>

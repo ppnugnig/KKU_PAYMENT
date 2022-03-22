@@ -34,7 +34,7 @@ padding: 20px;
 display: block;
 justify-content: center;
 }
-.btn-right,.right{
+.btn-right{
 float: right;
 
 }
@@ -93,4 +93,13 @@ background-color: black;
 }
 .btn-linkcolor:hover{
     color:white;
+}
+#btn-line{
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
 }

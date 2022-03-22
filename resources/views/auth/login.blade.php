@@ -11,12 +11,10 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-color">
-                <div class="card-header">{{ __('เข้าสู่ระบบ') }}</div>
+        <div class="col-md-4 bg-form p-2">
+                <div class=" text-white fs-4 text-center mb-2">{{ __('เข้าสู่ระบบ') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" >
                         @csrf
 
                         <div class="row mb-3">
@@ -76,8 +74,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+ 
 @endsection
 
 

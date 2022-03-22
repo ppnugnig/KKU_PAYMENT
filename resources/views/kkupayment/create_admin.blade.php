@@ -21,21 +21,22 @@
 
 <body class="bg-color">
 
-@extends('navbar')
+@extends('navadmin')
 
-@section('navbar')
+@section('navadmin')
+
+       
+        
+
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-
-                    <div class="card-body">
-
-                  
-
-                        <td></td>
+            <div class="col-md-12 mb-5">
+    <h2 class="text-white text-center">ตรวจสอบการชำระเงิน</h2>
+                
+            <p class="text-white">  จำนวนเงินทั้งหมด: {{$amount_suc}}  บาท</p>
+               
                         <table class="table table-borderless" id="table-color">
-
+                  
                             <thead class="text-center" id="head-border">
 
                                 <tr>
@@ -133,8 +134,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+    
 
 
     @stop

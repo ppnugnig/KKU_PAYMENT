@@ -28,11 +28,12 @@
 
     @section('navbar')
     <div class="card-body mt-5" id="bg-orange">
-        <h2 class="text-white text-center">ข้อมูลส่วนตัว</h2>
+        <h2 class="text-white text-center">ข้อมูลส่วนตัว </h2>
         <div class="mb-3">
 
 
-            @foreach($students as $key => $value)
+             @foreach($Users as $User) 
+
             @foreach($courses as $course)
 
             @foreach($departments as $department)
@@ -41,21 +42,20 @@
 
 
             @if(
-            $value->course_id==$course->course_id
+            Auth::user()->course_id==$course->course_id
             and
-            $value->dept_id==$department->dept_id
+            Auth::user()->dept_id==$department->dept_id
             and
-            $value->faculty_id==$facultie->faculty_id
+            Auth::user()->faculty_id==$facultie->faculty_id
             and 
-            $value->std_id==Auth::user()->std 
-            
-           
+            Auth::user()->std == $User->std
 
             )
-         
+
+          
 
 
-            รหัสนักศึกษา :
+            รหัสนักศึกษา : 
             <input class="form-control" type="text" name='std_id' value=' {{Auth::user()->std}}' readonly>
             ชื่อ-นามสกุล :
             <input class="form-control" type="text" name='std_fullname' value='{{Auth::user()->name}} {{Auth::user()->lname}}' readonly>
@@ -73,7 +73,7 @@
             @endforeach
             @endforeach
             @endforeach
-            @endforeach
+           @endforeach 
 
 
 

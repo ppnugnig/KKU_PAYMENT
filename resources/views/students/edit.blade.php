@@ -6,11 +6,11 @@
 
    
 </head>
-<body class="bg-colr">
+<body class="bg-color">
 @extends('students.layout')
 
 @section('content')
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-12">
             <h2 class="text-white text-center">แก้ไขข้อมูล</h2>
             <a href="{{route('students.index')}}" class='btn my-3' id="btn-back">&loarr; กลับ</a>
@@ -150,7 +150,7 @@
     </form>
     </form>
 @endsection
-@extends('navbar')
+@extends('navadmin')
 @extends('footer')
 </body>
 </html>

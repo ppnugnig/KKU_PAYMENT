@@ -10,7 +10,7 @@ use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserscheduleController;
 use App\Http\Controllers\StudentController;
-
+use App\Http\Controllers\LogoutController;
 use App\http\Controllers\KkupaymentController;
 
 /*
@@ -24,13 +24,19 @@ use App\http\Controllers\KkupaymentController;
 |
 */
 
-// Route::get('/', function () {
-//      return view('index');
-// }); 
-
+/*  Route::get('/', function () {
+      return view('login');
+ }); 
+ */
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/',[IndexController::class,'welcome']);
+
+/* 
+Route::get('/logout',[LoginController::class,'__construct']); */
+
+Route::get('/logout',[LogoutController::class,'perform'])->name('logout.perform');
+
+Route::get('/index',[IndexController::class,'welcome']);
 Route::get('/account',[AccountController::class,'account']);
 Route::get('/navbar',[NavbarController::class,'navbar']);
 Route::get('/navadmin',[NavAdminController::class,'navadmin']);
@@ -56,6 +62,7 @@ Route::post('/add-kkupayment', [KkupaymentController::class, 'store']);
 
 Route::get('/activity',[KkupaymentController::class,'activity']);
 
+Route::get('/activity_user',[KkupaymentController::class,'activity_user']);
 
 /* Route::post('/activity',[KkupaymentController::class,'update_amount_activity']);  */
 
@@ -77,5 +84,5 @@ Route::post('/status', [KkupaymentController::class,'update_status']);
 ////////////////////////////////////////////
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+    return view('index');
+});

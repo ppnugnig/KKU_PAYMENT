@@ -9,7 +9,7 @@
 @extends('schedules.layout')
 
 @section('content')
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-12">
             <h2 class="text-white text-center">ข้อมูลการชำระเงิน</h2>
             <a href="{{route('schedules.create')}}" class="btn my-3" id="btn-creat">+ สร้าง</a>
@@ -46,7 +46,7 @@
     {!! $data->links() !!}
 
 @endsection
-@extends('navbar')
+@extends('navadmin')
 @extends('footer')
 </body>
 </html>

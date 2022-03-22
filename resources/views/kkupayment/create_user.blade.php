@@ -30,21 +30,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-
-                    <div class="card-body">
+            <div class="col-md-12">>
 
 
 
                         <td></td>
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-borderless " id="table-color">
+                    
                        
-                       
-
-                       
-                       
-                            <thead>
+                            <thead class="text-center" id="head-border">
 
                                 <tr>
                                     <th valign='middle'>รหัสนักศึกษา</th>
@@ -57,7 +51,7 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
 
                                 <tr>
 
@@ -97,8 +91,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+      
         @stop
 
         @extends('footer')

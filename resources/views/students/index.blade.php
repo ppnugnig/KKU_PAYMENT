@@ -10,7 +10,7 @@
 @extends('students.layout')
 
 @section('content')
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-12">
             <h2 class="text-white text-center">ข้อมูลนักศึกษา</h2>
             <a href="{{route('students.create')}}" class="btn  my-3" id="btn-creat">+ สร้าง</a>
@@ -107,6 +107,7 @@
     {!! $students->links() !!}
 
 @endsection
-@extends('navbar')
+@extends('navadmin')
+@extends('footer')
 </body>
 </html>
